@@ -1,0 +1,8 @@
+{
+  "INVALID_PARAMS": "Invalid request parameters",
+  "UNAUTHORIZED": "Not logged in or session expired",
+  "FORBIDDEN": "No permission",
+  "NOT_FOUND": "Resource not found",
+  "INTERNAL_ERROR": "System busy, please try again later",
+  "DATABASE_ERROR": "System busy, please try again later"
+}

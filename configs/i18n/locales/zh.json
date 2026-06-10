@@ -1,0 +1,8 @@
+{
+  "INVALID_PARAMS": "请求参数不合法",
+  "UNAUTHORIZED": "未登录或登录已过期",
+  "FORBIDDEN": "没有权限",
+  "NOT_FOUND": "资源不存在",
+  "INTERNAL_ERROR": "系统繁忙，请稍后重试",
+  "DATABASE_ERROR": "系统繁忙，请稍后重试"
+}

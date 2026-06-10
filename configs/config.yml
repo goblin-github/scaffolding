@@ -1,0 +1,32 @@
+app:
+  port: ":8080"
+  mode: "release"              # debug | release
+  read_timeout: 30           # seconds，从连接建立到读完整个请求（包括 body）的最长时间，超时就断连。防慢客户端攻击。
+  write_timeout: 30          # seconds，写完响应（包括 body）的最长时间。如果客户端接收很慢，超时后断连。
+  idle_timeout: 60           # seconds，Keep-Alive 连接空闲多久后关闭。超过这个时间没新请求就回收连接。
+  shutdown_timeout: 10       # seconds，优雅关机最大等待时间，超时强制退出
+
+logger:
+  filename: "logs/app.log"
+  level: "info"              # debug | info | warn | error
+  max_size: 10               # MB
+  max_backups: 5
+  max_age: 30                # days
+  compress: true
+  console: true              # 是否同时输出到控制台
+
+database:
+  dsn: "root:123456@tcp(127.0.0.1:3306)/my_db?charset=utf8mb4&parseTime=True&loc=Local"
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 3600    # seconds
+
+cache:
+  addr: "127.0.0.1:6379"
+  password: ""
+  db: 0
+  pool_size: 50
+
+jwt:
+  secret: ""           # 为空则跳过 JWT 初始化，认证中间件不生效
+  expires_after: 7200  # seconds
