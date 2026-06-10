@@ -67,7 +67,7 @@ func attrs(ctx context.Context, args []any) []any {
 	if !ok || rid == "" {
 		return args
 	}
-	return append([]any{"rid", rid}, args...)
+	return append([]any{"tid", rid}, args...)
 }
 
 func Info(ctx context.Context, msg string, args ...any) {
